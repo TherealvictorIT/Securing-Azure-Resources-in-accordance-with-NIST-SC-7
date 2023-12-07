@@ -1,0 +1,1 @@
+# Securing-Azure-Resources-in-accordance-with-NIST-SC-7
