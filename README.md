@@ -1,6 +1,6 @@
 # Securing-Azure-Resources-in-accordance-with-NIST-SC-7
 
-![Securing the network](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/0b0ad44e-fcb1-4454-a528-ad18923c0c33)
+![nsg-subnet (Network watcher topology)](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/5e575d50-739e-42d8-9999-be2953430433)
 
 ## Introduction
 After allowing the VMs to be exposed to the internet for over 24 hours, the next step is to implement security measures and observe the outcomes for an additional 24 hours. The objective is to ensure alignment with NIST SC-7 recommendations, emphasizing restricted access within a secure network environment. Tasks include securing Azure Key Vault and a Storage Account by disabling public access, establishing private endpoints, and configuring Network Security Groups for the VMs.
