@@ -14,17 +14,24 @@ Next, a Private Endpoint will be created to ensure that the Key Vault is accessi
 
 <img width="600" alt="Creating Private endpoint" src="https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/02503884-7316-4782-b286-591d5d19a60e">
  
-
 The same thing will be done with the Storage account. You will first make sure that you disable Allow Blob anonymous access by going to the configuration settings.
-[Insert image here] 
-Disable public access from the Internet. Create a private endpoint
-	[Insert image here]
-Once the private endpoints are setup we can test them by doing an nslookup and observing if they resolve to a private IP address using a VM that is part of the subnet. In this case both storage and key vault resolve to a private IP address.
-	[Insert image here]
-Configure VM NSG inbound port rule 
 
-In order to limit access to the virtual machine the VM’s NSG will be configure so that only My IP address is able to establish a connection with the VM. This is done for both the Windows VM and the Linux VM. 
-[Insert image here] 
+<img width="923" alt="Storage account blob access" src="https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/137b7a9f-8212-4965-b6d4-bd9ae48f3aff">
+
+Disable public access from the Internet. Create a private endpoint
+
+![PE-Storage settings](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/04d9cef3-56db-453e-b8f1-1ab83f6216de)
+
+Once the private endpoints are setup we can test them by doing an nslookup and observing if they resolve to a private IP address using a VM that is part of the subnet. In this case both storage and key vault resolve to a private IP address.
+
+![nslookup storage and key vault](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/1dfe5c1f-e835-40d4-a7fb-40ac8dcd9aee)
+
+ 
+## Configuring VM NSG inbound port rule 
+
+In order to limit access to the virtual machine the VM’s NSG will be configure so that only "My IP address" is able to establish a connection with the VM. This is done for both the Windows VM and the Linux VM. 
+
+![Windows VM NSG configuration](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/261224dd-37d4-4be1-b1f0-f0f73ddc3182)
 
 Create Network Security Rule and attach it to the subnet
 In order to satisfy the Microsoft Cloud Defender recommendation of attaching an NSG to a subnet an NSG is created and attached to the subnet but no rules will be added to it. In a production environment the NSG should be configured but in this lab we will not do that.  
