@@ -28,14 +28,15 @@ Once the private endpoints are setup we can test them by doing an nslookup and o
 
  
 ## Configuring VM NSG inbound port rule 
-
 In order to limit access to the virtual machine the VM’s NSG will be configure so that only "My IP address" is able to establish a connection with the VM. This is done for both the Windows VM and the Linux VM. 
 
 ![Windows VM NSG configuration](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/261224dd-37d4-4be1-b1f0-f0f73ddc3182)
 
-Create Network Security Rule and attach it to the subnet
-In order to satisfy the Microsoft Cloud Defender recommendation of attaching an NSG to a subnet an NSG is created and attached to the subnet but no rules will be added to it. In a production environment the NSG should be configured but in this lab we will not do that.  
-	[Insert Image here]
+## Create Network Security Rule and attach it to the subnet
+To adhere to Microsoft Cloud Defender recommendations, an NSG is established and linked to the subnet. While it is essential to configure the NSG in a production environment, no rules are added in this lab setting.
+
+![Create NSG to attach to subnet configurations](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/27350281-f863-47a0-8896-f940dea0db34)
+
 Show SC.7 Boundary protection results with image and description 
 Explain how everything is setup now
 
