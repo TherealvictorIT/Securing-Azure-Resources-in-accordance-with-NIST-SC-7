@@ -33,11 +33,14 @@ In order to limit access to the virtual machine the VM’s NSG will be configure
 ![Windows VM NSG configuration](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/261224dd-37d4-4be1-b1f0-f0f73ddc3182)
 
 ## Create Network Security Rule and attach it to the subnet
-To adhere to Microsoft Cloud Defender recommendations, an NSG is established and linked to the subnet. While it is essential to configure the NSG in a production environment, no rules are added in this lab setting.
+To adhere to Microsoft Cloud Defender recommendations, an NSG is established and linked to the subnet. While it is essential to configure the NSG in a production environment, no rules are added to the NSG in this lab setting.
 
 ![Create NSG to attach to subnet configurations](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/27350281-f863-47a0-8896-f940dea0db34)
 
-Show SC.7 Boundary protection results with image and description 
-Explain how everything is setup now
+Having implemented these security measures, the environment largely aligns with NIST SP 800-53- SC-7 Boundary Protection. The only exception is the absence of Azure Firewall setup, and an attack-vm being intentionally exposed for a separate, unrelated lab.
 
-Include the results you get from having the nsg setup and secured 
+![SC 7 Before and After](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/c502066f-8d04-43a9-967e-a4360c869c0e)
+
+Ultimately, we transitioned from an environment exposed to the internet to a secured setup, closely aligning with NIST SP 800-53- SC-7 Boundary Protection.
+
+![Secure network](https://github.com/TherealvictorIT/Securing-Azure-Resources-in-accordance-with-NIST-SC-7/assets/125538763/b36c05cc-561b-4e98-95b7-b2261455dcbe)
